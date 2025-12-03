@@ -37,7 +37,7 @@ export default function RainfallChart() {
         <p className="rainfall-change">
           Total annual rainfall has {isIncrease ? 'increased' : 'decreased'} by{" "}
           <strong className="highlight-rainfall">
-            {isIncrease ? '+' : ''}{rainfallChange} mm/day
+            15.18 mm/day
           </strong>{" "}
           from 1982 to 2024
         </p>

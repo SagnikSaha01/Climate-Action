@@ -64,7 +64,7 @@ export default function ScrollRainfall() {
               {Math.round(displayYear)}
             </div>
             <div className="rainfall-value">
-              15.18 mm/day
+              {displayRainfall.toFixed(1)} mm/day
             </div>
             <div className="rainfall-subtitle">
               (total annual)

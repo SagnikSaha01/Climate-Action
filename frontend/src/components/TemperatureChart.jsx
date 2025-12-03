@@ -36,7 +36,7 @@ export default function TemperatureChart() {
       >
         <h2>Kolkata's Rising Temperature</h2>
         <p className="temp-increase">
-          Average temperature has increased by <strong className="highlight-temp">+{tempIncrease}°C</strong> from 1981 to 2024
+          Average temperature has increased by <strong className="highlight-temp">+1.29°C</strong> from 1981 to 2024
         </p>
 
         <div className="chart-wrapper">

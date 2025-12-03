@@ -1,0 +1,144 @@
+.scroll-rainfall-container {
+  height: 120vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-rainfall-content {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.scroll-rainfall-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #a8d8ff, #4db8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(100, 150, 255, 0.3);
+}
+
+.scroll-rainfall-instruction {
+  font-size: 1.2rem;
+  color: #8cc4f0;
+  margin-bottom: 60px;
+}
+
+.rainfall-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.rainfall-year-display {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #4db8ff;
+  text-shadow: 0 0 30px rgba(77, 184, 255, 0.5);
+  letter-spacing: 4px;
+}
+
+.rainfall-value {
+  font-size: 5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, #4db8ff 0%, #6eccff 50%, #8ce0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 40px rgba(77, 184, 255, 0.6);
+  filter: drop-shadow(0 4px 20px rgba(77, 184, 255, 0.4));
+}
+
+.rainfall-subtitle {
+  font-size: 1rem;
+  color: #6ba8d4;
+  font-style: italic;
+  margin-top: -10px;
+}
+
+.water-droplets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.water-droplet {
+  position: absolute;
+  width: 20px;
+  height: 24px;
+  background: radial-gradient(circle at 30% 30%, rgba(150, 200, 255, 0.8), rgba(77, 184, 255, 0.4));
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  animation: fall 3s ease-in infinite;
+  box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 0.3),
+              0 4px 10px rgba(77, 184, 255, 0.3);
+}
+
+.water-droplet:nth-child(2n) {
+  animation-duration: 2.5s;
+  width: 15px;
+  height: 18px;
+}
+
+.water-droplet:nth-child(3n) {
+  animation-duration: 3.5s;
+  width: 25px;
+  height: 30px;
+}
+
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-rainfall-title {
+    font-size: 2rem;
+  }
+
+  .scroll-rainfall-instruction {
+    font-size: 1rem;
+  }
+
+  .rainfall-year-display {
+    font-size: 2.5rem;
+  }
+
+  .rainfall-value {
+    font-size: 3rem;
+  }
+
+  .water-droplet {
+    width: 15px;
+    height: 18px;
+  }
+}

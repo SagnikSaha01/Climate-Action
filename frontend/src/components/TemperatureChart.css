@@ -1,0 +1,148 @@
+.temperature-chart-container {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #0f0f0f 0%, #1a0a0a 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.temp-increase {
+  font-size: 1.4rem;
+  margin: 30px 0 60px;
+  color: #ddd;
+}
+
+.highlight-temp {
+  color: #ff4444;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.chart-wrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 100%;
+}
+
+.chart-labels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  padding: 20px 0;
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+}
+
+.chart-label {
+  display: block;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+  height: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  flex: 1;
+}
+
+.bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+  min-width: 30px;
+  height: 100%;
+}
+
+.bar {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  transform-origin: bottom;
+  transition: all 0.3s ease;
+  min-height: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.bar:hover {
+  filter: brightness(1.2);
+  transform: scaleX(1.1);
+}
+
+.temp-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.bar:hover .temp-label {
+  opacity: 1;
+}
+
+.year-label {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #888;
+  transform: rotate(-45deg);
+  white-space: nowrap;
+}
+
+.chart-note {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .chart-wrapper {
+    gap: 10px;
+  }
+
+  .chart-labels {
+    height: 300px;
+    font-size: 0.75rem;
+  }
+
+  .chart {
+    gap: 4px;
+    height: 300px;
+  }
+
+  .year-label {
+    font-size: 0.6rem;
+  }
+
+  .temp-increase {
+    font-size: 1.1rem;
+  }
+
+  .highlight-temp {
+    font-size: 1.5rem;
+  }
+}

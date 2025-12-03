@@ -78,7 +78,7 @@ export default function App() {
         >
           <h2>What the Data Shows</h2>
           <p className="data-highlight">
-            Kolkata has warmed by <strong>+{actualTempIncrease}°C</strong> since the early 1980s.
+            Kolkata has warmed by <strong>+1.29°C</strong> since the early 1980s.
           </p>
           <p>
             Based on NASA satellite data from 1981-2024, the annual average temperature in Kolkata
